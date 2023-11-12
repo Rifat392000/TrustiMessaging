@@ -1,0 +1,126 @@
+﻿
+<style>
+
+    .level-change {
+        padding-right: 25px;
+        font-weight: 500;
+    }
+    #sendMessageBtn {
+        background-color: green;
+        color: white;
+    }
+
+        #sendMessageBtn:hover {
+            background-color: #036d03;
+        }
+
+    .cancel-btn:hover {
+        background-color: #dc3545;
+    }
+
+    #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); 
+        display: none;
+        z-index: 9999; 
+    }
+
+</style>
+<h2 class="create">Bulk Message</h2>
+<hr  />
+
+
+<h2 style="font-weight:500; margin-top:20px">Choose any Service</h2>
+<div id="serviceCheckboxList" style="margin:10px 0;">
+    @foreach (var socialService in Model.SocialServices)
+    {
+        <label class="level-change">
+            <input type="checkbox" class="serviceCheckbox" value="@socialService.ServiceId">
+            @socialService.ServiceName
+        </label>
+    }
+</div>
+
+<div style="margin-top:20px;">
+    <label for="messageInput"><b>Write your message</b></label><br>
+    <textarea id="messageInput" rows="8" cols="60" style="margin-top:5px; border:2px solid; border-radius:5px; padding:10px;font-size:16px; box-sizing: border-box;" placeholder="Write Your Message Here ....."></textarea><br>
+    <button id="sendMessageBtn" class="primary-btn">Send Message</button>
+    <a asp-controller="AppUser" asp-action="GetbulkMessages" class="cancel-btn">Back</a>
+</div>
+
+
+<div id="overlay"></div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const sendMessageBtn = document.getElementById("sendMessageBtn");
+        const overlay = document.getElementById("overlay"); // Get the overlay element
+
+        sendMessageBtn.addEventListener("click", function () {
+            const selectedServiceCheckboxes = document.querySelectorAll(".serviceCheckbox:checked");
+            const selectedServiceIds = Array.from(selectedServiceCheckboxes).map(checkbox => checkbox.value).join(",");
+            const messageContent = document.getElementById("messageInput").value;
+
+            if (!selectedServiceIds) {
+                alert("Please select at least one service.");
+            } else if (!messageContent.trim()) {
+                alert("Please provide a message.");
+            } else {
+                // Show the overlay
+                overlay.style.display = "block";
+
+                const data = {
+                    serviceIds: selectedServiceIds,
+                    customerMessage: messageContent
+                };
+
+                fetch("/AppUser/InsertbulkMessagecontroller", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(data)
+                })
+                    .then(response => response.json())
+                    .then(result => {
+                        if (result.success) {
+                            // Display Toastr notification
+                            toastr.options = {
+                                "positionClass": "toast-top-right",
+                                "timeOut": "2000", // 2 seconds
+                                "closeButton": true,
+                                "progressBar": true,
+                                "newestOnTop": true,
+                                "rtl": false,
+                                "onHidden": function () {
+                                    overlay.style.display = "none"; 
+                                    window.location.href = '@Url.Action("bulkmsgcreate", "AppUser")';
+                                },
+                            };
+                            toastr.success(`Message added to the queue`);
+                        } else {
+                            alert(result.message);
+                            overlay.style.display = "none"; 
+                        }
+                    });
+            }
+        });
+    });
+</script>
+
+
+
+
+
+<script>
+    // Get the element by ID
+    var dashboardSection = document.getElementById('messages');
+    // Change the background color
+    dashboardSection.style.backgroundColor = '#11101d';
+    dashboardSection.querySelector('span').style.color = 'white';
+    dashboardSection.querySelector('i').style.color = 'white';
+</script>

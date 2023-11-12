@@ -1,0 +1,33 @@
+﻿@model string
+
+@{
+    ViewData["Title"] = "Add Service - ";
+}
+
+<h2 style="font-weight:600; margin-bottom:20px">Add New Social Media Service</h2>
+
+<form asp-controller="SocialService" asp-action="AddSocialService" method="post">
+    <div class="create">
+        <label for="serviceName" >
+            <h3 class="create">Service Name<sup>*</sup></h3>
+        </label>
+        <input type="text" class="input-change" id="serviceName" name="serviceName" placeholder="Service Name" required />
+    </div>
+   <div >
+
+        <button type="submit" class="primary-btn" style="background-color:#0079FF">Create</button>
+        <a asp-controller="SocialService" asp-action="Settings" class="cancel-btn">Cancel</a>
+
+   </div>
+</form>
+
+
+
+<script>
+    // Get the element by ID
+    var dashboardSection = document.getElementById('settings');
+    // Change the background color
+    dashboardSection.style.backgroundColor = '#11101d';
+    dashboardSection.querySelector('span').style.color = 'white';
+    dashboardSection.querySelector('i').style.color = 'white';
+</script>

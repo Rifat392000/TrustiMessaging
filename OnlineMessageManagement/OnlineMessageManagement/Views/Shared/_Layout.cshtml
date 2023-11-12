@@ -1,0 +1,179 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]Online Message Management</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!--do not delete this script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <scrtpt src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></scrtpt>
+
+</head>
+<body>
+   
+        <header class="sidebar open">
+            <div class="logo-details" style="color: white; margin-bottom:25px;">
+            <img src="~/image/tbl.png" alt="" width="70px" class="icon" style="margin-top: 15px;">
+            <div class="logo_name" style="margin-top: 15px; padding-left:4px; "><span>Trust</span> <span style="display: block; "> <img src="~/image/i.png" width="18px" />Messaging</span> </div>
+                <i class='bx bx-menu' id="btn"></i>
+            </div>
+            <ul class="nav-list" >
+                <li>
+                <a asp-area="" asp-controller="SocialService" asp-action="SocialServiceList" id="dashboard">
+                        <i class='bx bx-grid-alt'></i>
+                        <span class="links_name">Dashboard</span>
+                    </a>
+                    <span class="tooltip">Dashboard</span>
+                </li>
+                <li>
+                <a asp-area="" asp-controller="ServiceUser" asp-action="Index" id="customer">
+                        <i class='bx bx-user'></i>
+                        <span class="links_name">Customer</span>
+                    </a>
+                <span class="tooltip">Customer</span>
+                </li>
+                <li>
+                <a asp-area="" asp-controller="MessageBox" asp-action="Index" id="messages">
+                        <i class='bx bx-chat'></i>
+                        <span class="links_name">Messages</span>
+                    </a>
+                    <span class="tooltip">Messages</span>
+                </li>
+            <li id="analytics-li" style="display: none;">
+                <a asp-area="" asp-controller="AppUser" asp-action="BulkMessageInfoCombined" id="analytics">
+                        <i class='bx bx-pie-chart-alt-2'></i>
+                        <span class="links_name">Analytics</span>
+                    </a>
+                    <span class="tooltip">Analytics</span>
+                </li>
+            <li id="settings-li" style="display: none;">
+                <a asp-area="" asp-controller="SocialService" asp-action="settings" id="settings">
+                        <i class='bx bx-cog'></i>
+                        <span class="links_name">Settings</span>
+                    </a>
+                    <span class="tooltip">Settings</span>
+                </li>
+
+            <li class="profile">
+                <div class="profile-details">
+                    <img id="profileImg" alt="profileImg">
+                    <div class="name_job">
+                     
+                        <div class="name"> <span id="name"></span></div>
+                        <div class="job" ><span style="padding-right:4px" id="loginId"></span>(<span id="userType"></span>)</div>
+                        <script>
+                            $(document).ready(function () {
+                                loginUser(); //when the page loads automatically call the function
+                            });
+
+                            function loginUser() {
+                                $.ajax({
+                                    url: '/User/LogUserDetails',
+                                    type: 'POST',
+                                    dataType: 'json',
+                                    success: function (data) {
+                                        if (data.errorMessage) {
+
+                                            console.log(data.errorMessage);
+                                        } else {
+                                            
+                                            $('#name').text(data.name);
+                                            $('#loginId').text(data.loginId);
+                                          
+
+                                            if (data.userId === 1) {
+
+                                                $('#userType').text('Admin');
+                                                $('#profileImg').attr('src', '/image/admin.png');
+                                                //Admin use only
+                                                $('#analytics-li').show();
+                                                $('#settings-li').show();
+
+                                            } else {
+                                                $('#userType').text('User');
+                                                $('#profileImg').attr('src', '/image/user.png');
+                                            }
+                                        }
+                                    },
+                                    error: function (xhr, status, error) {
+                                        // Handle error
+                                        console.log(error);
+                                    }
+                                });
+                            }
+                        </script>
+                        
+                    </div>
+                </div>
+     <a href="javascript:void(0);" id="logout-button">
+    <i class='bx bx-log-out' id="log_out"></i>
+</a>
+<script>
+    let logoutButton = document.getElementById("logout-button");
+    logoutButton.addEventListener("click", function () {
+        fetch("/User/Logout", { method: "POST" })
+        .then(() => {
+            history.replaceState(null, null, "/");
+            window.location.reload();
+        })
+        .catch(error => {
+            console.error("Logout failed:", error);
+        });
+    });
+</script>
+
+                
+            </li>
+               
+            </ul>
+
+       
+        </header>
+
+    <main role="main" class="home-section" style="padding-left:50px">
+        @RenderBody()
+        <div style="position:absolute;right:0;bottom:0;"><p style="padding-right:20px;padding-bottom:20px;font-weight:600;font-size:12px">&#169; Rifat and Trust Bank Limited 2023</p></div>
+   </main>
+    <script>
+        let sidebar = document.querySelector(".sidebar");
+        let closeBtn = document.querySelector("#btn");
+        let searchBtn = document.querySelector(".bx-search");
+
+        closeBtn.classList.replace("bx-menu", "bx-menu-alt-right"); 
+
+        closeBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("open");
+            menuBtnChange();
+        });
+
+        searchBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("open");
+            menuBtnChange();
+        });
+
+        function menuBtnChange() {
+            if (sidebar.classList.contains("open")) {
+                closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+            } else {
+                closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+            }
+        }
+    </script>
+  
+   
+    
+    <!-- Toastr library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,187 @@
+﻿@model Tuple<List<MessageInfoByService>, List<MessageInfoByService>, List<MessageInfoByService>, List<MessageInfoByService>>
+
+
+<style>
+
+    .fl-table td{
+        padding:5px;
+    }
+
+</style>
+
+
+<div class="table-wrapper" style="margin-bottom:30px">
+    <table class="fl-table">
+        <caption>Snigle  Message Details</caption>
+        <thead>
+            <tr>
+                <th>Service Name</th>
+                <th>Total</th>
+                <th>Processing</th>
+                <th>Pending</th>
+                <th>Success</th>
+                <th>Failed</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var result in Model.Item3)
+            {
+                <tr>
+                    <td style="font-weight:600">@result.ServiceName</td>
+                    <td>@result.Total</td>
+                    <td>@result.Process</td>
+                    <td>@result.Pending</td>
+                    <td>@result.Success</td>
+                    <td>@result.Failed</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div class="table-wrapper" style="margin-bottom:50px">
+
+    <table class="fl-table">
+        <caption>Bulk Message Details</caption>
+        <thead>
+            <tr>
+                <th>Service Name</th>
+                <th>Total</th>
+                <th>Processing</th>
+                <th>Pending</th>
+                <th>Success</th>
+                <th>Failed</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var result in Model.Item1)
+            {
+                <tr>
+                    <td style="font-weight:600">@result.ServiceName</td>
+                    <td>@result.Total</td>
+                    <td>@result.Process</td>
+                    <td>@result.Pending</td>
+                    <td>@result.Success</td>
+                    <td>@result.Failed</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+<p style="font-size:25px; font-weight:600 ; margin-bottom:10px;">Sent Message Information</p>
+<hr style="margin-right:50px" />
+
+<div style="display:flex;gap:50px; padding-bottom:50px">
+
+
+    <div class="table-wrapper" style="margin-top:15px">
+        <table class="fl-table">
+            <caption style="font-size:20px; margin-bottom:-5px;font-weight:500">Single Messages</caption>
+            <thead>
+                <tr>
+                    <th>Send Date</th>
+                    <th>Number of Messages</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var result in Model.Item4)
+                {
+                    <tr>
+                        <td>@result.DistinctDate</td>
+                        <td>
+
+                            <div style="display:flex; justify-content:center; flex-direction:column; align-items:center">
+                                <span style="font-weight:600">@result.NumMessagesPerMinute</span>
+                                <div id="page-wrap">
+
+                                    <div class="meter">
+                                        @if (result.NumMessagesPerMinute >= 20)
+                                        {
+                                            <span style="width: 100%;"></span>
+                                        }
+                                        else
+                                        {
+                                            <span style="width: @(result.NumMessagesPerMinute * 5)%;"></span>
+                                        }
+                                    </div>
+
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="table-wrapper" style="margin-top:15px">
+        <table class="fl-table">
+            <caption style="font-size:20px; margin-bottom:-5px;font-weight:500">Bulk Messages</caption>
+            <thead>
+                <tr>
+                    <th>Send Date</th>
+                    <th>Number of Messages</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var result in Model.Item2)
+                {
+                    <tr>
+                        <td>@result.DistinctDate</td>
+                        <td>
+                         
+                         <div style="display:flex; justify-content:center; flex-direction:column; align-items:center">
+                                <span style="font-weight:600">@result.NumMessagesPerMinute</span>
+                                <div id="page-wrap">
+
+                                    <div class="meter">
+                                        @if (result.NumMessagesPerMinute >= 20)
+                                        {
+                                            <span style="width: 100%;"></span>
+                                        }
+                                        else
+                                        {
+                                            <span style="width: @(result.NumMessagesPerMinute * 5)%;"></span>
+                                        }
+                                    </div>
+
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+<script>
+    // Get the element by ID
+    var dashboardSection = document.getElementById('analytics');
+    // Change the background color
+    dashboardSection.style.backgroundColor = '#11101d';
+    dashboardSection.querySelector('span').style.color = 'white';
+    dashboardSection.querySelector('i').style.color = 'white';
+
+
+
+    $(".meter > span").each(function () {
+        $(this)
+            .data("origWidth", $(this).width())
+            .width(0)
+            .animate(
+                {
+                    width: $(this).data("origWidth")
+                },
+                1200
+            );
+    });
+</script>
+

@@ -1,0 +1,429 @@
+﻿<style>
+    .highlight {
+        background-color: #ff9632;
+    }
+
+    .level-change{
+        padding-right: 25px;
+        font-weight:500;
+       
+    }
+  
+    input[type='checkbox'] {
+        accent-color: green;
+    }
+
+    #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); 
+        display: none;
+        z-index: 9999; 
+    }
+
+    ::selection {
+        color: #fff;
+        background: #4285f4;
+    }
+
+    .wrapper, .content {
+        width: 330px;
+    }
+
+    .select-btn, li {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .select-btn {
+        height: 50px;
+        max-height: 100px;
+        padding: 0 20px;
+        font-size: 18px;
+        background: #fff;
+        border-radius: 6px;
+        justify-content: space-between;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        border: 2px solid;
+    }
+
+        .select-btn i {
+            font-size: 31px;
+            transition: transform 0.3s linear;
+        }
+
+    .wrapper.active .select-btn i {
+        transform: rotate(-180deg);
+    }
+
+    .content {
+        display: none;
+        padding: 20px;
+        margin-top: 10px;
+        background: #fff;
+        border-radius: 7px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        position: absolute;
+        z-index: 1;
+        border: 2px solid;
+    }
+
+    .wrapper.active .content {
+        display: block;
+    }
+
+    .content .search {
+        position: relative;
+    }
+
+    .search i {
+        top: 50%;
+        left: 15px;
+        color: #999;
+        font-size: 20px;
+        pointer-events: none;
+        transform: translateY(-50%);
+        position: absolute;
+    }
+
+    .search input {
+        height: 45px;
+        width: 100%;
+        outline: none;
+        font-size: 17px;
+        border-radius: 5px;
+        padding: 0 20px 0 43px;
+        border: 2px solid green;
+    }
+
+
+        .search input::placeholder {
+            color: #bfbfbf;
+        }
+
+    .content .options {
+        margin-top: 10px;
+        max-height: 250px;
+        overflow-y: auto;
+        padding-right: 7px;
+    }
+
+    .options::-webkit-scrollbar {
+        width: 7px;
+    }
+
+    .options::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 25px;
+    }
+
+    .options::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 25px;
+    }
+
+        .options::-webkit-scrollbar-thumb:hover {
+            background: #b3b3b3;
+        }
+
+    .options li {
+        height: 50px;
+        padding: 0 13px;
+        font-size: 18px;
+    }
+
+        .options li:hover, li.selected {
+            border-radius: 5px;
+            background: #f2f2f2;
+        }
+
+
+    #serviceDropdown {
+        width: 170px;
+        height: 30px;
+        border: 2px solid;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    #sendMessageBtn{
+        background-color:green;
+        color:white;
+    }
+
+    #sendMessageBtn:hover{
+            background-color: #036d03;
+    }
+
+    .cancel-btn:hover {
+        background-color: #dc3545;
+    }
+ 
+</style>
+
+<h2 class="create">Single Message</h2>
+<hr />
+<h2 style="font-weight:500">Choose any Service</h2>
+<div id="serviceCheckboxList" style="margin:10px 0; ">
+    @foreach (var socialService in Model.SocialServices)
+    {
+        <label class="level-change" >
+            <input type="checkbox" name="serviceId" value="@socialService.ServiceId">
+            @socialService.ServiceName
+        </label>
+    }
+</div>
+
+
+<h2 style="font-weight:500">Find Customers</h2>
+<div class="wrapper" style="margin-top:10px">
+    <div class="select-btn">
+        <span>Select Customer</span>
+        <i class="uil uil-angle-down"></i>
+    </div>
+    <div class="content" data-search="customer">
+        <div class="search">
+            <i class="uil uil-search"></i>
+            <input spellcheck="false" type="text" placeholder="Search Name or Id">
+        </div>
+        <ul class="options"></ul>
+    </div>
+</div>
+
+
+<div style="margin-top:15px">
+    <h2 style="font-weight:500">Customer Details</h2>
+
+    <table style="font-weight:600">
+        <tr>
+            <td>Customer Id</td>
+            <td>:</td>
+            <td style="color:red"><span id="customerCid"></span></td>
+        </tr>
+        <tr>
+            <td style="padding-right:15px">Customer Name</td>
+            <td style="padding-right:15px">:</td>
+            <td><span id="customerCname"></span></td>
+        </tr>
+        <tr>
+            <td>Phone Number</td>
+            <td>:</td>
+            <td><span id="customerPhoneNumber"></span></td>
+        </tr>
+        <tr>
+            <td>Service</td>
+            <td>:</td>
+            <td><span id="customerServiceName"></span></td>
+        </tr>
+    </table>
+</div>
+
+<div style="margin-top:10px;">
+    <label for="messageInput"><b>Write your message</b></label><br>
+    <textarea id="messageInput" rows="8" cols="60" style="margin-top:5px; border:2px solid; border-radius:5px; padding:10px;font-size:16px; box-sizing: border-box;" placeholder="Write Your Message Here ....."></textarea><br>
+    <button id="sendMessageBtn" class="primary-btn " >Send Message</button>
+    <a asp-action="GetSingleMessages" class="cancel-btn">Back</a>
+</div>
+
+<br />
+
+
+<script>
+    let appUsers = [];
+    const wrapper = document.querySelector(".wrapper");
+    const selectBtn = wrapper.querySelector(".select-btn");
+    const searchInp = wrapper.querySelector("input");
+    const options = wrapper.querySelector(".options");
+    const serviceCheckboxList = document.getElementById("serviceCheckboxList");
+
+    serviceCheckboxList.addEventListener("change", (event) => {
+        const checkboxes = serviceCheckboxList.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach((checkbox) => {
+            if (checkbox !== event.target) {
+                checkbox.checked = false;
+            }
+        });
+
+        const selectedServiceId = event.target.checked ? event.target.value : "";
+        updateCustomerList(selectedServiceId);
+    });
+
+    function toggleCustomerListVisibility() {
+        wrapper.classList.toggle("active");
+    }
+
+    selectBtn.addEventListener("click", toggleCustomerListVisibility);
+
+    document.addEventListener("click", function (event) {
+        const targetElement = event.target;
+        if (!wrapper.contains(targetElement) && !selectBtn.contains(targetElement)) {
+            wrapper.classList.remove("active");
+        }
+    });
+
+    updateCustomerList('');
+
+    function updateCustomerList(selectedServiceId) {
+        options.innerHTML = "";
+
+        fetch(`/AppUser/GetCustomersByService?serviceId=${selectedServiceId}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                return response.json();
+            })
+            .then(data => {
+                appUsers = data;
+              
+
+                data.forEach(data => {
+                    let li = `<li onclick="updateName(this)" data-Customer="${data.cid}">${data.cname} (${data.cid})</li>`;
+                    options.insertAdjacentHTML("beforeend", li);
+                });
+
+                searchInp.addEventListener("keyup", () => {
+                    let arr = [];
+                    let searchWord = searchInp.value.trim().toLowerCase();
+
+                    arr = appUsers.filter(data => {
+                        return data.cname.toLowerCase().includes(searchWord) || String(data.cid).startsWith(searchWord);
+                    }).map(data => {
+                        let isSelected = data.cname === selectBtn.firstElementChild.innerText ? "selected" : "";
+                        let highlightedName = highlightMatch(data.cname, searchWord);
+                        let highlightedId = highlightMatch(String(data.cid), searchWord);
+
+                        return `<li onclick="updateName(this)" class="${isSelected}" data-Customer="${data.cid}">${highlightedName} (${highlightedId})</li>`;
+                    });
+
+                    if (arr.length === 0) {
+                        options.innerHTML = `<p style="margin-top: 10px; color:red; font-weight:500;">Oops! Customer not found. Please check other services</p>`;
+                    } else {
+                        options.innerHTML = arr.join("");
+                    }
+                });
+            })
+            .catch(error => {
+                console.error("Error fetching customer data:", error);
+            });
+    }
+
+ 
+    function updateName(selectedLi) {
+        const selectedCid = selectedLi.getAttribute("data-Customer");
+        displayCustomerDetails(selectedCid);
+
+        wrapper.classList.remove("active");
+        selectBtn.firstElementChild.innerText = selectedLi.innerText;
+    }
+
+    function displayCustomerDetails(selectedCid) {
+        const selectedAppUser = appUsers.find(data => data.cid.toString() === selectedCid);
+        if (selectedAppUser) {
+            document.getElementById("customerCid").innerText = selectedAppUser.cid;
+            document.getElementById("customerCname").innerText = selectedAppUser.cname;
+            document.getElementById("customerPhoneNumber").innerText = selectedAppUser.phoneNumber;
+            document.getElementById("customerServiceName").innerText = selectedAppUser.serviceName;
+        } else {
+            document.getElementById("customerCid").innerText = "";
+            document.getElementById("customerCname").innerText = "";
+            document.getElementById("customerPhoneNumber").innerText = "";
+            document.getElementById("customerServiceName").innerText = "";
+        }
+    }
+
+    function highlightMatch(text, searchWord) {
+        let startIndex = text.toLowerCase().indexOf(searchWord);
+        if (startIndex !== -1) {
+            let endIndex = startIndex + searchWord.length;
+            return text.slice(0, startIndex) + '<span class="highlight">' + text.slice(startIndex, endIndex) + '</span>' + text.slice(endIndex);
+        }
+        return text;
+    }
+</script>
+
+
+
+<div id="overlay"></div>
+
+<script>
+    $(document).ready(function () {
+
+        const overlay = document.getElementById("overlay");
+        const sendMessageBtn = document.getElementById("sendMessageBtn");
+        const messageInput = document.getElementById("messageInput");
+        const customerCid = document.getElementById("customerCid");
+
+
+        sendMessageBtn.addEventListener("click", function () {
+            const selectedCid = document.getElementById("customerCid").innerText;
+            const customerMessage = messageInput.value.trim();
+
+            if (selectedCid && customerMessage) {
+                overlay.style.display = "block"; 
+
+                const cid = parseInt(selectedCid);
+                const cname = document.getElementById("customerCname").innerText;
+                const phoneNumber = document.getElementById("customerPhoneNumber").innerText;
+                const serviceName = document.getElementById("customerServiceName").innerText;
+                const serviceId = parseInt(document.querySelector('input[name="serviceId"]:checked').value);
+
+                const data = {
+                    cid: cid,
+                    cname: cname,
+                    phoneNumber: phoneNumber,
+                    serviceName: serviceName,
+                    serviceId: serviceId,
+                    customerMessage: customerMessage
+                };
+
+                fetch("/AppUser/InsertSingleMessage", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(data)
+                })
+                    .then(response => response.json())
+                    .then(result => {
+                        if (result.success) {
+                            // Show a Toastr notification
+                            toastr.options = {
+                                "positionClass": "toast-top-right",
+                                "timeOut": "2000", // 2 seconds
+                                "closeButton": true,
+                                "progressBar": true,
+                                "newestOnTop": true,
+                                "rtl": false,
+                                "onHidden": function () {
+                                    overlay.style.display = "none"; 
+                                    window.location.href = '@Url.Action("msgcreate", "AppUser")';
+                                },
+                            };
+                            toastr.success(`${cname} (${cid}) Message added to the queue`);
+                        }
+                    })
+                    .catch(error => {
+                        overlay.style.display = "none"; 
+                        toastr.error("Error sending message");
+                    });
+            } else {
+                
+                alert("Please select a customer and write a message before sending.");
+            }
+        });
+    });
+
+    // Get the element by ID
+    var dashboardSection = document.getElementById('messages');
+    // Change the background color
+    dashboardSection.style.backgroundColor = '#11101d';
+    dashboardSection.querySelector('span').style.color = 'white';
+    dashboardSection.querySelector('i').style.color = 'white';
+</script>

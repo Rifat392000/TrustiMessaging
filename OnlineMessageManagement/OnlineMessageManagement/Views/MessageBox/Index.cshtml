@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Messages - ";
+}
+
+<div style="display:flex;gap:30px;">
+    <a class="message-body" asp-controller="AppUser" asp-action="GetSingleMessages"><img src="~/image/email.png" /> Single Messages</a>
+    <a class="message-body" asp-controller="AppUser" asp-action="GetbulkMessages"><img src="~/image/broadcasting.png" />Bulk Messages</a>
+</div>
+
+
+<script>
+    // Get the element by ID
+    var dashboardSection = document.getElementById('messages');
+    // Change the background color
+    dashboardSection.style.backgroundColor = '#11101d';
+    dashboardSection.querySelector('span').style.color = 'white';
+    dashboardSection.querySelector('i').style.color = 'white';
+    </script>
+

@@ -1,0 +1,39 @@
+﻿@model OnlineMessageManagement.Models.SocialService
+
+@{
+    ViewData["Title"] = "Delete Service - ";
+}
+
+<h2 class="create">Delete Service</h2>
+
+<h3 class="create">Are you sure you want to delete this service?</h3>
+
+<table style="font-size:18px; font-weight:600;" class="create">
+    <tr>
+        <td>Service Id</td>
+        <td>:</td>
+        <td>@Model.ServiceId</td>
+    </tr>
+
+    <tr>
+        <td for="serviceName" style="padding-right:10px">Service Name</td>
+        <td style="padding-right:10px">:</td>
+        <td>@Model.ServiceName</td>
+    </tr>
+</table>
+
+<form asp-action="DeleteServiceConfirmed" asp-route-id="@Model.ServiceId" method="post">
+    <div >
+        <input type="submit" value="Delete" class="primary-btn" style="background-color: #dc3545;" /> 
+        <a asp-action="Settings" class="cancel-btn">Cancel</a>
+    </div>
+</form>
+
+<script>
+    // Get the element by ID
+    var dashboardSection = document.getElementById('settings');
+    // Change the background color
+    dashboardSection.style.backgroundColor = '#11101d';
+    dashboardSection.querySelector('span').style.color = 'white';
+    dashboardSection.querySelector('i').style.color = 'white';
+</script>

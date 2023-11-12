@@ -1,0 +1,152 @@
+I:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\appsettings.Development.json
+I:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\appsettings.json
+I:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\OnlineMessageManagement.staticwebassets.runtime.json
+I:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\OnlineMessageManagement.exe
+I:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\OnlineMessageManagement.deps.json
+I:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\OnlineMessageManagement.runtimeconfig.json
+I:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\OnlineMessageManagement.dll
+I:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\OnlineMessageManagement.pdb
+I:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\EPPlus.Core.dll
+I:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\System.Data.SqlClient.dll
+I:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\System.Drawing.Common.dll
+I:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\System.Xml.XPath.XmlDocument.dll
+I:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+I:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+I:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+I:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+I:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+I:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.0\System.Drawing.Common.dll
+I:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.0\System.Drawing.Common.dll
+I:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.csproj.AssemblyReference.cache
+I:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.GeneratedMSBuildEditorConfig.editorconfig
+I:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.AssemblyInfoInputs.cache
+I:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.AssemblyInfo.cs
+I:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.csproj.CoreCompileInputs.cache
+I:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.MvcApplicationPartsAssemblyInfo.cache
+I:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.RazorAssemblyInfo.cache
+I:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.RazorAssemblyInfo.cs
+I:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\staticwebassets.build.json
+I:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\staticwebassets.development.json
+I:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+I:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\scopedcss\bundle\OnlineMessageManagement.styles.css
+I:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\scopedcss\projectbundle\OnlineMessageManagement.bundle.scp.css
+I:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.csproj.CopyComplete
+I:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.dll
+I:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\refint\OnlineMessageManagement.dll
+I:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.pdb
+I:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.genruntimeconfig.cache
+I:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\ref\OnlineMessageManagement.dll
+D:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\appsettings.Development.json
+D:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\appsettings.json
+D:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\OnlineMessageManagement.staticwebassets.runtime.json
+D:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\OnlineMessageManagement.exe
+D:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\OnlineMessageManagement.deps.json
+D:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\OnlineMessageManagement.runtimeconfig.json
+D:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\OnlineMessageManagement.dll
+D:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\OnlineMessageManagement.pdb
+D:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\EPPlus.Core.dll
+D:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\System.Data.SqlClient.dll
+D:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\System.Xml.XPath.XmlDocument.dll
+D:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+D:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+D:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+D:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.0\System.Drawing.Common.dll
+D:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.0\System.Drawing.Common.dll
+D:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.csproj.AssemblyReference.cache
+D:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.GeneratedMSBuildEditorConfig.editorconfig
+D:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.AssemblyInfoInputs.cache
+D:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.AssemblyInfo.cs
+D:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.csproj.CoreCompileInputs.cache
+D:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.MvcApplicationPartsAssemblyInfo.cache
+D:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.RazorAssemblyInfo.cache
+D:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.RazorAssemblyInfo.cs
+D:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\staticwebassets.build.json
+D:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\staticwebassets.development.json
+D:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\scopedcss\bundle\OnlineMessageManagement.styles.css
+D:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\scopedcss\projectbundle\OnlineMessageManagement.bundle.scp.css
+D:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.csproj.CopyComplete
+D:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.dll
+D:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\refint\OnlineMessageManagement.dll
+D:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.pdb
+D:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.genruntimeconfig.cache
+D:\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\ref\OnlineMessageManagement.dll
+D:\Web Development\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\appsettings.Development.json
+D:\Web Development\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\appsettings.json
+D:\Web Development\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\OnlineMessageManagement.staticwebassets.runtime.json
+D:\Web Development\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\OnlineMessageManagement.exe
+D:\Web Development\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\OnlineMessageManagement.deps.json
+D:\Web Development\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\OnlineMessageManagement.runtimeconfig.json
+D:\Web Development\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\OnlineMessageManagement.dll
+D:\Web Development\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\OnlineMessageManagement.pdb
+D:\Web Development\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\EPPlus.Core.dll
+D:\Web Development\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\System.Data.SqlClient.dll
+D:\Web Development\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\Web Development\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\System.Xml.XPath.XmlDocument.dll
+D:\Web Development\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+D:\Web Development\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+D:\Web Development\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+D:\Web Development\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Web Development\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Web Development\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.0\System.Drawing.Common.dll
+D:\Web Development\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.0\System.Drawing.Common.dll
+D:\Web Development\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.csproj.AssemblyReference.cache
+D:\Web Development\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.GeneratedMSBuildEditorConfig.editorconfig
+D:\Web Development\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.AssemblyInfoInputs.cache
+D:\Web Development\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.AssemblyInfo.cs
+D:\Web Development\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.csproj.CoreCompileInputs.cache
+D:\Web Development\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.MvcApplicationPartsAssemblyInfo.cache
+D:\Web Development\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.RazorAssemblyInfo.cache
+D:\Web Development\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.RazorAssemblyInfo.cs
+D:\Web Development\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\staticwebassets.build.json
+D:\Web Development\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\staticwebassets.development.json
+D:\Web Development\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\Web Development\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\scopedcss\bundle\OnlineMessageManagement.styles.css
+D:\Web Development\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\scopedcss\projectbundle\OnlineMessageManagement.bundle.scp.css
+D:\Web Development\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.csproj.CopyComplete
+D:\Web Development\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.dll
+D:\Web Development\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\refint\OnlineMessageManagement.dll
+D:\Web Development\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.pdb
+D:\Web Development\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.genruntimeconfig.cache
+D:\Web Development\OnlineMessageManagement-master\OnlineMessageManagement-master\OnlineMessageManagement\obj\Debug\net6.0\ref\OnlineMessageManagement.dll
+D:\Internship\Trust Bank Limited\Trust iMessaging\Trust_iMessaging\OnlineMessageManagement\OnlineMessageManagement\bin\Debug\net6.0\appsettings.Development.json
+D:\Internship\Trust Bank Limited\Trust iMessaging\Trust_iMessaging\OnlineMessageManagement\OnlineMessageManagement\bin\Debug\net6.0\appsettings.json
+D:\Internship\Trust Bank Limited\Trust iMessaging\Trust_iMessaging\OnlineMessageManagement\OnlineMessageManagement\bin\Debug\net6.0\OnlineMessageManagement.staticwebassets.runtime.json
+D:\Internship\Trust Bank Limited\Trust iMessaging\Trust_iMessaging\OnlineMessageManagement\OnlineMessageManagement\bin\Debug\net6.0\OnlineMessageManagement.exe
+D:\Internship\Trust Bank Limited\Trust iMessaging\Trust_iMessaging\OnlineMessageManagement\OnlineMessageManagement\bin\Debug\net6.0\OnlineMessageManagement.deps.json
+D:\Internship\Trust Bank Limited\Trust iMessaging\Trust_iMessaging\OnlineMessageManagement\OnlineMessageManagement\bin\Debug\net6.0\OnlineMessageManagement.runtimeconfig.json
+D:\Internship\Trust Bank Limited\Trust iMessaging\Trust_iMessaging\OnlineMessageManagement\OnlineMessageManagement\bin\Debug\net6.0\OnlineMessageManagement.dll
+D:\Internship\Trust Bank Limited\Trust iMessaging\Trust_iMessaging\OnlineMessageManagement\OnlineMessageManagement\bin\Debug\net6.0\OnlineMessageManagement.pdb
+D:\Internship\Trust Bank Limited\Trust iMessaging\Trust_iMessaging\OnlineMessageManagement\OnlineMessageManagement\bin\Debug\net6.0\EPPlus.Core.dll
+D:\Internship\Trust Bank Limited\Trust iMessaging\Trust_iMessaging\OnlineMessageManagement\OnlineMessageManagement\bin\Debug\net6.0\System.Data.SqlClient.dll
+D:\Internship\Trust Bank Limited\Trust iMessaging\Trust_iMessaging\OnlineMessageManagement\OnlineMessageManagement\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\Internship\Trust Bank Limited\Trust iMessaging\Trust_iMessaging\OnlineMessageManagement\OnlineMessageManagement\bin\Debug\net6.0\System.Xml.XPath.XmlDocument.dll
+D:\Internship\Trust Bank Limited\Trust iMessaging\Trust_iMessaging\OnlineMessageManagement\OnlineMessageManagement\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+D:\Internship\Trust Bank Limited\Trust iMessaging\Trust_iMessaging\OnlineMessageManagement\OnlineMessageManagement\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+D:\Internship\Trust Bank Limited\Trust iMessaging\Trust_iMessaging\OnlineMessageManagement\OnlineMessageManagement\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+D:\Internship\Trust Bank Limited\Trust iMessaging\Trust_iMessaging\OnlineMessageManagement\OnlineMessageManagement\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Internship\Trust Bank Limited\Trust iMessaging\Trust_iMessaging\OnlineMessageManagement\OnlineMessageManagement\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Internship\Trust Bank Limited\Trust iMessaging\Trust_iMessaging\OnlineMessageManagement\OnlineMessageManagement\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.0\System.Drawing.Common.dll
+D:\Internship\Trust Bank Limited\Trust iMessaging\Trust_iMessaging\OnlineMessageManagement\OnlineMessageManagement\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.0\System.Drawing.Common.dll
+D:\Internship\Trust Bank Limited\Trust iMessaging\Trust_iMessaging\OnlineMessageManagement\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.csproj.AssemblyReference.cache
+D:\Internship\Trust Bank Limited\Trust iMessaging\Trust_iMessaging\OnlineMessageManagement\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.GeneratedMSBuildEditorConfig.editorconfig
+D:\Internship\Trust Bank Limited\Trust iMessaging\Trust_iMessaging\OnlineMessageManagement\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.AssemblyInfoInputs.cache
+D:\Internship\Trust Bank Limited\Trust iMessaging\Trust_iMessaging\OnlineMessageManagement\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.AssemblyInfo.cs
+D:\Internship\Trust Bank Limited\Trust iMessaging\Trust_iMessaging\OnlineMessageManagement\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.csproj.CoreCompileInputs.cache
+D:\Internship\Trust Bank Limited\Trust iMessaging\Trust_iMessaging\OnlineMessageManagement\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.MvcApplicationPartsAssemblyInfo.cache
+D:\Internship\Trust Bank Limited\Trust iMessaging\Trust_iMessaging\OnlineMessageManagement\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.RazorAssemblyInfo.cache
+D:\Internship\Trust Bank Limited\Trust iMessaging\Trust_iMessaging\OnlineMessageManagement\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.RazorAssemblyInfo.cs
+D:\Internship\Trust Bank Limited\Trust iMessaging\Trust_iMessaging\OnlineMessageManagement\OnlineMessageManagement\obj\Debug\net6.0\staticwebassets.build.json
+D:\Internship\Trust Bank Limited\Trust iMessaging\Trust_iMessaging\OnlineMessageManagement\OnlineMessageManagement\obj\Debug\net6.0\staticwebassets.development.json
+D:\Internship\Trust Bank Limited\Trust iMessaging\Trust_iMessaging\OnlineMessageManagement\OnlineMessageManagement\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\Internship\Trust Bank Limited\Trust iMessaging\Trust_iMessaging\OnlineMessageManagement\OnlineMessageManagement\obj\Debug\net6.0\scopedcss\bundle\OnlineMessageManagement.styles.css
+D:\Internship\Trust Bank Limited\Trust iMessaging\Trust_iMessaging\OnlineMessageManagement\OnlineMessageManagement\obj\Debug\net6.0\scopedcss\projectbundle\OnlineMessageManagement.bundle.scp.css
+D:\Internship\Trust Bank Limited\Trust iMessaging\Trust_iMessaging\OnlineMessageManagement\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.csproj.CopyComplete
+D:\Internship\Trust Bank Limited\Trust iMessaging\Trust_iMessaging\OnlineMessageManagement\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.dll
+D:\Internship\Trust Bank Limited\Trust iMessaging\Trust_iMessaging\OnlineMessageManagement\OnlineMessageManagement\obj\Debug\net6.0\refint\OnlineMessageManagement.dll
+D:\Internship\Trust Bank Limited\Trust iMessaging\Trust_iMessaging\OnlineMessageManagement\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.pdb
+D:\Internship\Trust Bank Limited\Trust iMessaging\Trust_iMessaging\OnlineMessageManagement\OnlineMessageManagement\obj\Debug\net6.0\OnlineMessageManagement.genruntimeconfig.cache
+D:\Internship\Trust Bank Limited\Trust iMessaging\Trust_iMessaging\OnlineMessageManagement\OnlineMessageManagement\obj\Debug\net6.0\ref\OnlineMessageManagement.dll

@@ -1,0 +1,401 @@
+﻿@model List<bulkMessage>
+
+<style>
+ 
+
+    #Process {
+        background-color: #800080;
+        padding: 0 3px;
+        color: white;
+        font-size: 14px;
+        border-radius: 2px;
+        font-weight: 500;
+    }
+
+   
+
+    .CustomerMessage {
+        width: 270px;
+        overflow-x: auto;
+    }
+
+        .CustomerMessage::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .CustomerMessage::-webkit-scrollbar-track {
+            background: #b3b3b3;
+            border-radius: 8px;
+        }
+
+        .CustomerMessage::-webkit-scrollbar-thumb {
+            background: #3e62e7;
+            border-radius: 8px;
+        }
+
+   
+    .reload {
+        padding: 4px;
+        font-size: 13px;
+        font-weight: 500;
+        background-color: #11101d;
+        color: white;
+        border: none;
+        border-radius: 2px;
+        text-decoration: none;
+        display: block;
+        width: 60px;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+        .reload:hover {
+            background-color: #c6f333;
+            color: black;
+        }
+
+
+
+    input[type=checkbox] {
+        accent-color: #dc3545;
+    }
+
+    #processBulk
+    {
+        padding:6px;
+        font-size:17px;
+        border:none;
+        margin-top:10px ;
+        margin-bottom:10px;
+        background: #800080;
+        color:white;
+        font-weight:600;
+        border-radius:3px;
+        cursor:pointer;
+
+    }
+
+    #processBulk:hover{
+            background: #7a007a;
+            -webkit-transform: scale(1.01);
+            -ms-transform: scale(1.01);
+            transform: scale(1.01);
+    }
+</style>
+
+<h2 class="create">Bulk Message Processing</h2>
+<hr style="margin-right:0;width: 95% " />
+
+
+<div class="searchElement">
+
+    <div>
+        <label for="slct" style="font-size:16px; font-weight:500;">Records per page  </label>
+        <select id="slct" onchange="changeRowsPerPage()" style="border:2px solid #11101d; border-radius:5px;">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+            <option value="0" selected>All</option>
+        </select>
+        <!-- SVG Sprites -->
+        <svg class="sprites">
+            <symbol id="select-arrow-down" viewBox="0 0 10 6">
+                <polyline points="1 1 5 5 9 1"></polyline>
+            </symbol>
+        </svg>
+    </div>
+    <input style="margin-bottom:-50px" type="text" id="myInput" class="myInputC search-box" onkeyup="myFunction()" placeholder="Search for IDs, names, phone numbers or . . ." title="Type in a IDs, names, phone number or services">
+
+</div>
+
+
+
+<a class="reload" asp-controller="AppUser" asp-action="bulkMessageUncheckeds">Reload</a>
+
+
+<div class="table-wrapper custom-wrapper" style="width: 95% ;">
+    <table class="fl-table" id="myTable" style="width: 100%;">
+        <thead>
+            <tr>
+                <th style="padding: 0 10px;">
+                    <label for="selectAllCheckbox" style="margin-bottom:-4px;display:block">All</label>
+                    <input type="checkbox" id="selectAllCheckbox" onchange="selectAllRows(this)">
+
+                </th>
+
+                <th>Customer ID</th>
+                <th>Customer Name</th>
+                <th>Phone Number</th>
+                <th>Service Name</th>
+                <th>Customer Message</th>
+                <th >
+                    Message Status <p>Processing</p>
+                </th>
+                <th class="date-filter-header">
+                    <div class="datepicker-wrapper">
+                        <span style="display: block">Message created time</span>
+                        <input type="text" id="datepicker" placeholder="Select date">
+                        <span class="calendar-icon" onclick="showCalendarPicker()"><i class='bx bxs-calendar'></i></span>
+                    </div>
+                </th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var message in Model)
+            {
+                <tr>
+                    <td>
+                        <input type="checkbox" class="rowCheckbox"
+                               data-logSingleMessage="@message.logSingleMessage"
+                               data-checkedmsg="@message.checkedmsg"
+                               data-messageStatus="@message.messageStatus">
+                    </td>
+
+                    <td>@message.Cid</td>
+                    <td>@message.Cname</td>
+                    <td>@message.PhoneNumber</td>
+                    <td>@message.ServiceName</td>
+                    <td style="width:280px;">
+                        <div class="CustomerMessage">
+                            @message.CustomerMessage
+                        </div>
+                    </td>
+
+                    <td>
+                        @{
+                            if (@message.messageStatus == 0)
+                            {
+                                <span id="Process">Processing</span>
+                            }
+                           
+
+                        }
+
+                    </td>
+                    <td>
+                        <span> @message.MsgCreated.ToString("yyyy-MM-dd")</span><br>
+                        <span>@message.MsgCreated.ToString("HH:mm:ss")</span>
+
+                    </td>
+
+                  
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div id="selectedRowCount" style="margin-top: 10px; font-size:16px; font-weight:600;">
+    Selected rows <span id="selectedCount">0</span> out of <span id="totalCount">0</span>
+</div>
+
+
+<button id="processBulk" onclick="processBulkMessages()" >Process</button>
+<a asp-controller="SocialService" asp-action="settings" class="cancel-btn">Back</a>
+
+<script>
+    // Get the element by ID
+    var dashboardSection = document.getElementById('settings');
+    // Change the background color
+    dashboardSection.style.backgroundColor = '#11101d';
+    dashboardSection.querySelector('span').style.color = 'white';
+    dashboardSection.querySelector('i').style.color = 'white';
+</script>
+
+<script>
+
+
+    function changeRowsPerPage() {
+        var rowsPerPage = parseInt(document.getElementById('slct').value);
+        var table = document.getElementById("myTable");
+        var tr = table.getElementsByTagName("tr");
+        for (var i = 1; i < tr.length; i++) {
+            if (rowsPerPage === 0 || i <= rowsPerPage) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+        }
+    }
+
+    var isSearchActive = false;
+    
+    function myFunction() {
+        var input, filter, table, tr, td, i, j, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        isSearchActive = filter !== '';
+   
+        for (i = 1; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td");
+            var match = false;
+            for (j = 1; j < td.length - 3; j++) {
+                var cell = td[j];
+                txtValue = cell.textContent || cell.innerText;
+                if (filter === '' || txtValue.toUpperCase().indexOf(filter) > -1) {
+                    match = true;
+                    cell.innerHTML = highlightMatchingSubstring(txtValue, filter);
+                } else {
+                    cell.innerHTML = txtValue; 
+                }
+            }
+            if (match || filter === '') {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+        }
+    }
+
+
+    function highlightMatchingSubstring(text, filter) {
+        var regex = new RegExp(filter, 'gi');
+        return text.replace(regex, function (match) {
+            return '<span class="highlight">' + match + '</span>';
+        });
+    }
+
+
+
+    function selectAllRows(checkbox) {
+        var rowCheckboxes = document.querySelectorAll('.rowCheckbox');
+        var selectedCount = 0;
+
+        for (var i = 0; i < rowCheckboxes.length; i++) {
+            var row = rowCheckboxes[i].closest('tr');
+
+            if (!isSearchActive || (isSearchActive && row.style.display !== 'none')) {
+                rowCheckboxes[i].checked = checkbox.checked;
+                if (checkbox.checked) {
+                    selectedCount++;
+                }
+            }
+        }
+
+        document.getElementById('selectedCount').textContent = selectedCount;
+        document.getElementById('totalCount').textContent = rowCheckboxes.length;
+    }
+
+
+
+    function handleRowCheckboxChange() {
+        var rowCheckboxes = document.querySelectorAll('.rowCheckbox');
+        var selectAllCheckbox = document.getElementById('selectAllCheckbox');
+        var selectedCount = 0;
+
+        for (var i = 0; i < rowCheckboxes.length; i++) {
+            if (rowCheckboxes[i].checked) {
+                selectedCount++;
+            } else {
+                selectAllCheckbox.checked = false;
+            }
+        }
+
+        document.getElementById('selectedCount').textContent = selectedCount;
+        selectAllCheckbox.checked = selectedCount === rowCheckboxes.length;
+    }
+
+
+
+
+    var rowCheckboxes = document.querySelectorAll('.rowCheckbox');
+    var totalCountSpan = document.getElementById('totalCount');
+    totalCountSpan.textContent = rowCheckboxes.length;
+    for (var i = 0; i < rowCheckboxes.length; i++) {
+        rowCheckboxes[i].addEventListener('change', handleRowCheckboxChange);
+    }
+
+
+</script>
+
+
+<script>
+    $(document).ready(function () {
+        $("#datepicker").datepicker({
+            dateFormat: "yy-mm-dd",
+            onSelect: function (dateText) {
+                filterTableByDate(dateText);
+            }
+        });
+
+       
+        $("#datepicker").on("change", function () {
+            var selectedDateText = $(this).val();
+            filterTableByDate(selectedDateText);
+        });
+    });
+
+    function filterTableByDate(selectedDateText) {
+        var rows = document.querySelectorAll("#myTable tbody tr");
+
+        for (var i = 0; i < rows.length; i++) {
+            var row = rows[i];
+            var messageCreatedCell = row.querySelector("td:nth-child(8) span");
+            if (messageCreatedCell) {
+                var messageCreatedDateText = messageCreatedCell.textContent.split('<br>')[0].trim(); 
+
+                if (!selectedDateText || selectedDateText === messageCreatedDateText) {
+                    row.style.display = "table-row";
+                } else {
+                    row.style.display = "none";
+                }
+            }
+        }
+    }
+
+    function showCalendarPicker() {
+        $("#datepicker").datepicker("show");
+    }
+
+</script>
+
+
+<script>
+    function processBulkMessages() {
+        console.log("Button clicked!");
+        var selectedRows = document.querySelectorAll('.rowCheckbox:checked');
+        var dataToSend = [];
+
+        selectedRows.forEach(function (row) {
+            var logSingleMessage = row.getAttribute('data-logSingleMessage');
+            var checkedmsg = row.getAttribute('data-checkedmsg');
+            var messageStatus = row.getAttribute('data-messageStatus');
+
+
+            dataToSend.push({
+                logSingleMessage: parseInt(logSingleMessage),
+                checkedmsg: parseInt(checkedmsg),
+                messageStatus: parseInt(messageStatus)
+            });
+        });
+
+        if (dataToSend.length === 0) {
+            alert("No rows selected.");
+            return;
+        }
+
+      
+        $.ajax({
+            type: "POST",
+            url: "/AppUser/ProcessBulkMessages", 
+            data: JSON.stringify(dataToSend),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (response) {
+                alert(response.message);
+                // Reload the page
+                location.reload();
+            },
+            error: function (error) {
+                alert("An error occurred: " + error.responseText);
+            }
+        });
+    }
+
+</script>

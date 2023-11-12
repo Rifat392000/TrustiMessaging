@@ -1,0 +1,118 @@
+﻿@model OnlineMessageManagement.Models.ServiceUser
+@{
+    ViewData["Title"] = "Create - ";
+}
+<h2 class="create">Create Customer</h2>
+
+<form asp-action="Create" method="post" class="create" onsubmit="return validateForm()">
+    <table style="border-collapse: separate; border-spacing: 0 20px;">
+        <tr>
+            <td>
+                <h3>
+                    <label asp-for="CustomerCid">
+                        Customer Id<sup>*</sup>
+                    </label>
+                </h3>
+            </td>
+
+            <td>
+                <select asp-for="CustomerCid" class="input-change" asp-items="@ViewBag.CustomerCids">
+                    <option value="">-- Select Customer Id --</option>
+                </select>
+                <span asp-validation-for="CustomerCid"></span>
+            </td>
+        </tr>
+
+        <tr>
+            <td><h3><label style="padding-right:20px">Customer Name<sup>*</sup></label></h3></td>
+            <td><input type="text" id="customerName" class="input-change" disabled placeholder="Customer Name" /></td>
+        </tr>
+        <tr>
+            <td><h3><label asp-for="PhoneNumber">Phone Number<sup>*</sup></label></h3></td>
+            <td>
+                <input asp-for="PhoneNumber" class="input-change" placeholder="Phone Number" pattern="[0-9]{11}" title="Phone number must be 11 digits and contain only numbers (0-9)." required />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </td>
+        </tr>
+    </table>
+
+    <div class="form-group">
+        <h3> <label asp-for="ServiceUse">Service Use<sup>*</sup></label></h3>
+        @if (ViewBag.Services != null)
+        {
+            foreach (var service in ViewBag.Services)
+            {
+                <div>
+                    <input type="checkbox" id="@service.ServiceId" name="serviceIds" value="@service.ServiceId" />
+                    <label for="@service.ServiceId">@service.ServiceName</label>
+                </div>
+            }
+        }
+        else
+        {
+            <div>No social services available.</div>
+        }
+        <span asp-validation-for="ServiceUse" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Create" class="primary-btn" style="background-color:#0079FF" />
+        <a asp-action="Index" class="cancel-btn">Cancel</a>
+    </div>
+</form>
+
+<script>
+
+    // Get the element by ID
+    var userSection = document.getElementById('customer');
+    // Change the background color
+    userSection.style.backgroundColor = '#11101d';
+    userSection.querySelector('span').style.color = 'white';
+    userSection.querySelector('i').style.color = 'white';
+
+    function validateForm() {
+        var customerCid = document.getElementById("CustomerCid");
+        var phoneNumber = document.getElementById("PhoneNumber");
+        var selectedServices = document.querySelectorAll("input[name='serviceIds']:checked");
+
+        if (customerCid.value === '') {
+            alert("Please select a Customer Id.");
+            return false;
+        }
+
+        if (!phoneNumber.checkValidity()) {
+            alert("Phone number must be 11 digits and contain only numbers (0-9).");
+            return false;
+        }
+
+        if (selectedServices.length === 0) {
+            alert("Please select at least one service.");
+            return false;
+        }
+
+        return true;
+    }
+</script>
+
+<script>
+    $(document).ready(function () {
+        $('#CustomerCid').change(function () {
+            var selectedCid = $(this).val();
+            if (selectedCid !== '') {
+                $.ajax({
+                    url: '@Url.Action("GetCustomerName", "ServiceUser")',
+                    type: 'GET',
+                    data: { cid: selectedCid },
+                    success: function (data) {
+                        $('#customerName').val(data);
+                    },
+                    error: function () {
+                        $('#customerName').val('');
+                    }
+                });
+            } else {
+                $('#customerName').val('');
+            }
+        });
+    });
+</script>

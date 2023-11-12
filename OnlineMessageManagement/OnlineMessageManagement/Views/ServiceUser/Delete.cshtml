@@ -1,0 +1,92 @@
+﻿@model ServiceUserViewModel
+@{
+    ViewData["Title"] = "Delete - ";
+}
+<h2 class="create">Delete Customer</h2>
+<div class="create">
+    <h3>Are you sure you want to delete this record?</h3>
+    <table>
+
+        <tr style="color:red">
+            <td><h4 >Customer Id</h4></td>
+            <td><h4>:</h4></td>
+            <td><h4>@Model.ServiceUsers[0].Cid</h4></td>
+        </tr>
+
+        <tr>
+            <td><h4>Customer Name</h4></td>
+            <td><h4>:</h4></td>
+            <td><h4>@Model.ServiceUsers[0].Cname</h4></td>
+        </tr>
+
+
+        <tr>
+            <td><h4 style="padding-right:15px;">Phone Number</h4></td>
+            <td><h4 style="padding-right:15px;">:</h4></td>
+            <td><h4>@Model.ServiceUsers[0].PhoneNumber</h4></td>
+        </tr>
+
+        <tr>
+            <td><h4>Services Use</h4></td>
+            <td><h4>:</h4></td>
+            <td>
+                <h4>
+
+                    @{
+                        String[] values = @Model.ServiceUsers[0].ServiceUse.Split(',');
+
+                        int[] integerArray = new int[values.Length];
+
+                        int i = 0;
+                        foreach (string value in values)
+                        {
+                            int intValue;
+                            if (int.TryParse(values[i], out intValue))
+                            {
+                                integerArray[i] = intValue;
+                            }
+                            i++;
+                        }
+                       
+                        for (int j = 0; j < integerArray.Length; j++)
+                        {
+                            foreach (var socialService in Model.SocialServices)
+                            {
+                                if (integerArray[j] == @socialService.ServiceId)
+                                {
+                                    if (j > 0 && j < integerArray.Length)
+                                    {
+
+                                        <span>,</span>
+                                    }
+                                    <b>@socialService.ServiceName</b>
+
+                                   
+
+                                }
+                            }
+                        }
+
+                    }
+
+                </h4>
+            </td>
+        </tr>
+
+    </table>
+   
+  
+    <form method="post" asp-action="ConfirmDelete" asp-route-id="@Model.ServiceUsers[0].Cid">
+        <input type="submit" value="Delete" class="primary-btn" style="background-color: #dc3545;" />
+        <a asp-action="Index" class="cancel-btn">Cancel</a>
+    </form>
+</div>
+<script>
+    // Get the element by ID
+    var userSection = document.getElementById('customer');
+    // Change the background color
+    userSection.style.backgroundColor = '#11101d';
+    userSection.querySelector('span').style.color = 'white';
+    userSection.querySelector('i').style.color = 'white';
+
+</script>

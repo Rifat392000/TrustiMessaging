@@ -1,0 +1,192 @@
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\appsettings.Development.json
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\appsettings.json
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\msgWorkerBulk.exe
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\msgWorkerBulk.deps.json
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\msgWorkerBulk.runtimeconfig.json
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\msgWorkerBulk.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\msgWorkerBulk.pdb
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Binder.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Configuration.CommandLine.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Json.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Configuration.UserSecrets.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Physical.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.FileSystemGlobbing.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Hosting.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Hosting.Abstractions.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Hosting.WindowsServices.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Logging.Configuration.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Logging.Console.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Logging.Debug.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Logging.EventLog.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Logging.EventSource.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Newtonsoft.Json.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\RestSharp.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\System.Data.SqlClient.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\System.Diagnostics.EventLog.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\System.Reactive.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\System.Runtime.InteropServices.WindowsRuntime.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\System.ServiceProcess.ServiceController.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\System.Text.Json.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\WampSharp.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\WampSharp.NewtonsoftJson.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.Messages.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.ServiceProcess.ServiceController.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\obj\Debug\net6.0\msgWorkerBulk.csproj.AssemblyReference.cache
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\obj\Debug\net6.0\msgWorkerBulk.GeneratedMSBuildEditorConfig.editorconfig
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\obj\Debug\net6.0\msgWorkerBulk.AssemblyInfoInputs.cache
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\obj\Debug\net6.0\msgWorkerBulk.AssemblyInfo.cs
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\obj\Debug\net6.0\msgWorkerBulk.csproj.CoreCompileInputs.cache
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\obj\Debug\net6.0\msgWorkerBulk.csproj.CopyComplete
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\obj\Debug\net6.0\msgWorkerBulk.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\obj\Debug\net6.0\refint\msgWorkerBulk.dll
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\obj\Debug\net6.0\msgWorkerBulk.pdb
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\obj\Debug\net6.0\msgWorkerBulk.genruntimeconfig.cache
+H:\TBL-Project\msgWorkerBulk\msgWorkerBulk\obj\Debug\net6.0\ref\msgWorkerBulk.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\appsettings.Development.json
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\appsettings.json
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\msgWorkerBulk.exe
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\msgWorkerBulk.deps.json
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\msgWorkerBulk.runtimeconfig.json
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\msgWorkerBulk.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\msgWorkerBulk.pdb
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Binder.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Configuration.CommandLine.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Json.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Configuration.UserSecrets.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Physical.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.FileSystemGlobbing.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Hosting.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Hosting.Abstractions.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Hosting.WindowsServices.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Logging.Configuration.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Logging.Console.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Logging.Debug.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Logging.EventLog.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Logging.EventSource.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Newtonsoft.Json.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\RestSharp.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\System.Data.SqlClient.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\System.Diagnostics.EventLog.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\System.Reactive.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\System.Runtime.InteropServices.WindowsRuntime.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\System.ServiceProcess.ServiceController.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\System.Text.Json.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\WampSharp.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\WampSharp.NewtonsoftJson.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.Messages.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.ServiceProcess.ServiceController.dll
+I:\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+I:\msgWorkerBulk\msgWorkerBulk\obj\Debug\net6.0\msgWorkerBulk.csproj.AssemblyReference.cache
+I:\msgWorkerBulk\msgWorkerBulk\obj\Debug\net6.0\msgWorkerBulk.GeneratedMSBuildEditorConfig.editorconfig
+I:\msgWorkerBulk\msgWorkerBulk\obj\Debug\net6.0\msgWorkerBulk.AssemblyInfoInputs.cache
+I:\msgWorkerBulk\msgWorkerBulk\obj\Debug\net6.0\msgWorkerBulk.AssemblyInfo.cs
+I:\msgWorkerBulk\msgWorkerBulk\obj\Debug\net6.0\msgWorkerBulk.csproj.CoreCompileInputs.cache
+I:\msgWorkerBulk\msgWorkerBulk\obj\Debug\net6.0\msgWorkerBulk.csproj.CopyComplete
+I:\msgWorkerBulk\msgWorkerBulk\obj\Debug\net6.0\msgWorkerBulk.dll
+I:\msgWorkerBulk\msgWorkerBulk\obj\Debug\net6.0\refint\msgWorkerBulk.dll
+I:\msgWorkerBulk\msgWorkerBulk\obj\Debug\net6.0\msgWorkerBulk.pdb
+I:\msgWorkerBulk\msgWorkerBulk\obj\Debug\net6.0\msgWorkerBulk.genruntimeconfig.cache
+I:\msgWorkerBulk\msgWorkerBulk\obj\Debug\net6.0\ref\msgWorkerBulk.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\appsettings.Development.json
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\appsettings.json
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\msgWorkerBulk.exe
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\msgWorkerBulk.deps.json
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\msgWorkerBulk.runtimeconfig.json
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\msgWorkerBulk.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\msgWorkerBulk.pdb
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Binder.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Configuration.CommandLine.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Json.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Configuration.UserSecrets.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Physical.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Hosting.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Hosting.WindowsServices.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Logging.Configuration.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Logging.Console.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Logging.Debug.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Logging.EventLog.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Logging.EventSource.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\RestSharp.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\System.Data.SqlClient.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\System.Diagnostics.EventLog.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\System.Reactive.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\System.Runtime.InteropServices.WindowsRuntime.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\System.ServiceProcess.ServiceController.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\System.Text.Json.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\WampSharp.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\WampSharp.NewtonsoftJson.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.Messages.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.ServiceProcess.ServiceController.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\obj\Debug\net6.0\msgWorkerBulk.csproj.AssemblyReference.cache
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\obj\Debug\net6.0\msgWorkerBulk.GeneratedMSBuildEditorConfig.editorconfig
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\obj\Debug\net6.0\msgWorkerBulk.AssemblyInfoInputs.cache
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\obj\Debug\net6.0\msgWorkerBulk.AssemblyInfo.cs
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\obj\Debug\net6.0\msgWorkerBulk.csproj.CoreCompileInputs.cache
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\obj\Debug\net6.0\msgWorkerBulk.csproj.CopyComplete
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\obj\Debug\net6.0\msgWorkerBulk.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\obj\Debug\net6.0\refint\msgWorkerBulk.dll
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\obj\Debug\net6.0\msgWorkerBulk.pdb
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\obj\Debug\net6.0\msgWorkerBulk.genruntimeconfig.cache
+D:\Web Development\msgWorkerBulk\msgWorkerBulk\obj\Debug\net6.0\ref\msgWorkerBulk.dll

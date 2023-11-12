@@ -1,0 +1,457 @@
+﻿@model List<SingleMessage>
+
+<style>
+    .msg-btn {
+        background-color: #337ab7;
+        padding: 8px 0;
+        cursor: pointer;
+        border-radius: 5px;
+        color: white;
+        margin-top: 20px;
+        margin-bottom: 25px;
+    }
+
+        .msg-btn:hover {
+            -webkit-transform: scale(1.02);
+            -ms-transform: scale(1.02);
+            transform: scale(1.02);
+        }
+
+    #Process {
+        background-color: #800080;
+        padding: 0 3px;
+        color: white;
+        font-size: 14px;
+        border-radius: 2px;
+        font-weight: 500;
+    }
+
+    #Pending {
+        background-color: #F6BE00;
+        padding: 0 3px;
+        color: black;
+        font-size: 14px;
+        border-radius: 2px;
+        font-weight: 500;
+    }
+
+    #Success {
+        background-color: green;
+        padding: 0 3px;
+        color: white;
+        font-size: 14px;
+        border-radius: 2px;
+        font-weight: 500;
+    }
+
+    #Failed {
+        background-color: #c71f2f;
+        padding: 0 3px;
+        color: white;
+        font-size: 14px;
+        border-radius: 2px;
+        font-weight: 500;
+    }
+
+    .CustomerMessage {
+        width: 270px;
+        overflow-x: auto;
+    }
+
+        .CustomerMessage::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .CustomerMessage::-webkit-scrollbar-track {
+            background: #b3b3b3;
+            border-radius: 8px;
+        }
+
+        .CustomerMessage::-webkit-scrollbar-thumb {
+            background: #3e62e7;
+            border-radius: 8px;
+        }
+
+
+
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropbtn {
+        background-color: #3498db;
+        color: white;
+        padding: 8px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+        .dropdown-content span {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            cursor: pointer;
+        }
+
+            .dropdown-content span:hover {
+                background-color: #f1f1f1;
+            }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+        background-color: #2980b9;
+    }
+    .reload{
+        padding:  4px ;
+        font-size:13px;
+        font-weight:500;
+        background-color: #11101d;
+        color:white;
+        border:none;
+ border-radius:2px;
+ text-decoration:none;
+ display:block;
+ width:60px;
+ text-align:center;
+ margin-bottom:5px;
+
+    }
+    .reload:hover{
+            background-color: #c6f333;
+            color:black;
+
+    }
+
+
+
+</style>
+<h2 class="create">Single Message</h2>
+<hr style="margin-right:0;width: 95% " />
+<a asp-controller="AppUser" asp-action="msgcreate" class="anchor  msg-btn">Add new Message</a>
+<div style="display:flex;justify-content:right;width:95%; margin-top:-60px;"><a asp-controller="MessageBox" asp-action="Index" class="cancel-btn">Back</a></div>
+<div class="searchElement">
+
+    <div>
+        <label for="slct" style="font-size:16px; font-weight:500;">Records per page  </label>
+        <select id="slct" onchange="changeRowsPerPage()" style="border:2px solid #11101d; border-radius:5px;">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+            <option value="0" selected>All</option>
+        </select>
+        <!-- SVG Sprites -->
+        <svg class="sprites">
+            <symbol id="select-arrow-down" viewBox="0 0 10 6">
+                <polyline points="1 1 5 5 9 1"></polyline>
+            </symbol>
+        </svg>
+    </div>
+    <input style="margin-bottom:-50px" type="text" id="myInput" class="myInputC search-box" onkeyup="myFunction()" placeholder="Search for IDs, names, phone numbers or . . ." title="Type in a IDs, names, phone number or services">
+
+</div>
+
+
+<a class="reload" asp-controller="AppUser" asp-action="GetSingleMessages">Reload</a>
+
+
+<div class="table-wrapper custom-wrapper" style="width: 95% ; ">
+    <table class="fl-table" id="myTable" style="width: 100%;">
+        <thead>
+            <tr>
+                <th>Customer ID</th>
+                <th>Customer Name</th>
+                <th>Phone Number</th>
+                <th>Service Name</th>
+                <th>Customer Message</th>
+                <th class="message-status-header">
+                    <div class="dropdown">
+                        <button class="dropbtn">Message Status</button>
+                        <div class="dropdown-content">
+                            <span onclick="filterTableByStatus(null)">All</span>
+                            <span onclick="filterTableByStatus(0)">Processing</span>
+                            <span onclick="filterTableByStatus(1)">Pending</span>
+                            <span onclick="filterTableByStatus(2)">Success</span>
+                            <span onclick="filterTableByStatus(-1)">Failed</span>
+                        </div>
+                    </div>
+                </th>
+                <th class="date-filter-header">
+                    <div class="datepicker-wrapper">
+                        <span style="display: block">Message created time</span>
+                        <input type="text" id="datepicker" placeholder="Select date" >
+                        <span class="calendar-icon" onclick="showCalendarPicker()"><i class='bx bxs-calendar'></i></span>
+                    </div>
+                </th>
+
+
+                <th>
+                    <div class="datepicker-wrapper">
+                        <span style="display: block">Message sent time</span>
+                        <input type="text" id="sentDatePicker" placeholder="Select date">
+                        <span class="calendar-icon" onclick="showSentDatePicker()"><i class='bx bxs-calendar'></i></span>
+                    </div>
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var message in Model)
+            {
+                <tr>
+                    <td>@message.Cid</td>
+                    <td>@message.Cname</td>
+                    <td>@message.PhoneNumber</td>
+                    <td>@message.ServiceName</td>
+                    <td style="width:280px;">
+                        <div class="CustomerMessage">
+                            @message.CustomerMessage
+                        </div>
+                    </td>
+
+                    <td>
+                        @{
+                            if (@message.messageStatus == 0)
+                            {
+                                <span id="Process">Processing</span>
+                            }
+                            else if (@message.messageStatus == 1)
+                            {
+                                <span id="Pending">Pending</span>
+                            }
+                            else if (@message.messageStatus == 2)
+                            {
+                                <span id="Success">Success</span>
+                            }
+                            else if (@message.messageStatus == -1)
+                            {
+                                <span id="Failed">Failed</span>
+                            }
+
+
+
+                        }
+
+                    </td>
+                    <td>
+                        <span> @message.MsgCreated.ToString("yyyy-MM-dd")</span><br>
+                        <span>@message.MsgCreated.ToString("HH:mm:ss")</span>
+
+                    </td>
+
+                    <td>
+                        @if (@message.MsgSend != @message.MsgCreated)
+                        {
+                            <span> @message.MsgSend.ToString("yyyy-MM-dd")</span>
+
+                            <br>
+                            <span> @message.MsgSend.ToString("HH:mm:ss")</span>
+                        }
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<script>
+    // Get the element by ID
+    var dashboardSection = document.getElementById('messages');
+    // Change the background color
+    dashboardSection.style.backgroundColor = '#11101d';
+    dashboardSection.querySelector('span').style.color = 'white';
+    dashboardSection.querySelector('i').style.color = 'white';
+
+
+
+    function changeRowsPerPage() {
+        var rowsPerPage = parseInt(document.getElementById('slct').value);
+        var table = document.getElementById("myTable");
+        var tr = table.getElementsByTagName("tr");
+        for (var i = 1; i < tr.length; i++) {
+            if (rowsPerPage === 0 || i <= rowsPerPage) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+        }
+    }
+
+
+    function myFunction() {
+        var input, filter, table, tr, td, i, j, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 1; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td");
+            var match = false;
+            for (j = 0; j < td.length - 4; j++) {
+                var cell = td[j];
+                txtValue = cell.textContent || cell.innerText;
+                if (filter === '' || txtValue.toUpperCase().indexOf(filter) > -1) {
+                    match = true;
+                    cell.innerHTML = highlightMatchingSubstring(txtValue, filter);
+                } else {
+                    cell.innerHTML = txtValue; 
+                }
+            }
+            if (match || filter === '') {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+        }
+    }
+
+
+    function highlightMatchingSubstring(text, filter) {
+        var regex = new RegExp(filter, 'gi');
+        return text.replace(regex, function (match) {
+            return '<span class="highlight">' + match + '</span>';
+        });
+    }
+
+
+
+</script>
+
+<script>
+    var originalDisplayValues = {}; 
+
+    function filterTableByStatus(status) {
+        var rows = document.querySelectorAll("#myTable tbody tr");
+
+        if (status === null) {
+            for (var i = 0; i < rows.length; i++) {
+                rows[i].style.display = originalDisplayValues[i];
+            }
+            return;
+        }
+
+        if (Object.keys(originalDisplayValues).length === 0) {
+            for (var i = 0; i < rows.length; i++) {
+                originalDisplayValues[i] = rows[i].style.display;
+            }
+        }
+
+        for (var i = 0; i < rows.length; i++) {
+            var row = rows[i];
+            var messageStatusCell = row.querySelector("td:nth-child(6) span");
+            if (messageStatusCell) {
+                var currentStatus = messageStatusCell.getAttribute("id");
+                if ((currentStatus === "Process" && status === 0) ||
+                    (currentStatus === "Pending" && status === 1) ||
+                    (currentStatus === "Success" && status === 2) ||
+                    (currentStatus === "Failed" && status === -1)) {
+                    row.style.display = "table-row";
+                } else {
+                    row.style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+
+
+
+
+<script>
+    $(document).ready(function () {
+        $("#datepicker").datepicker({
+            dateFormat: "yy-mm-dd",
+            onSelect: function (dateText) {
+                filterTableByDate(dateText);
+            }
+        });
+
+       
+        $("#datepicker").on("change", function () {
+            var selectedDateText = $(this).val();
+            filterTableByDate(selectedDateText);
+        });
+    });
+
+    function filterTableByDate(selectedDateText) {
+        var rows = document.querySelectorAll("#myTable tbody tr");
+
+        for (var i = 0; i < rows.length; i++) {
+            var row = rows[i];
+            var messageCreatedCell = row.querySelector("td:nth-child(7) span");
+            if (messageCreatedCell) {
+                var messageCreatedDateText = messageCreatedCell.textContent.split('<br>')[0].trim(); 
+
+                if (!selectedDateText || selectedDateText === messageCreatedDateText) {
+                    row.style.display = "table-row";
+                } else {
+                    row.style.display = "none";
+                }
+            }
+        }
+    }
+
+    function showCalendarPicker() {
+        $("#datepicker").datepicker("show");
+    }
+
+</script>
+
+<script>
+
+    $(document).ready(function () {
+        $("#sentDatePicker").datepicker({
+            dateFormat: "yy-mm-dd",
+            onSelect: function (dateText) {
+                filterTableBySentTime(dateText);
+            }
+        });
+
+       
+        $("#sentDatePicker").on("change", function () {
+            var selectedDateText = $(this).val();
+            filterTableBySentTime(selectedDateText);
+        });
+    });
+    function filterTableBySentTime(selectedDateText) {
+        var rows = document.querySelectorAll("#myTable tbody tr");
+
+        for (var i = 0; i < rows.length; i++) {
+            var row = rows[i];
+            var messageSentCell = row.querySelector("td:nth-child(8) span"); 
+            if (messageSentCell) {
+                var messageSentDateText = messageSentCell.textContent.split('<br>')[0].trim(); 
+
+                if (!selectedDateText || selectedDateText === messageSentDateText) {
+                    row.style.display = "table-row";
+                } else {
+                    row.style.display = "none";
+                }
+            }
+        }
+    }
+    function showSentDatePicker() {
+        $("#sentDatePicker").datepicker("show");
+    }
+
+
+</script>
+

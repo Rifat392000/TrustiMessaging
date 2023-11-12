@@ -1,0 +1,40 @@
+﻿@model SocialService
+
+@{
+    ViewData["Title"] = "Edit Service - ";
+}
+
+<h2 style="margin-bottom:20px">Edit Service</h2>
+
+
+
+<form asp-controller="SocialService" asp-action="UpdateService" method="post">
+
+    <table style="font-size:18px; font-weight:600;" class="create"> 
+        <tr>
+            <td>Service Id</td>
+            <td >:</td>
+            <td>@Model.ServiceId</td>
+        </tr>
+
+        <tr>
+            <td for="serviceName" style="padding-right:10px">Service Name<sup>*</sup></td>
+            <td style="padding-right:10px">:</td>
+            <td><input type="text" class="input-change" id="serviceName" name="serviceName" value="@Model.ServiceName" required  /></td>
+        </tr>
+    </table>
+    <div>
+        <button type="submit" class="primary-btn" style="background-color:#0079FF">Save</button>
+        <a asp-controller="SocialService" asp-action="Settings" class="cancel-btn">Cancel</a>
+    </div>
+</form>
+
+
+<script>
+    // Get the element by ID
+    var dashboardSection = document.getElementById('settings');
+    // Change the background color
+    dashboardSection.style.backgroundColor = '#11101d';
+    dashboardSection.querySelector('span').style.color = 'white';
+    dashboardSection.querySelector('i').style.color = 'white';
+</script>

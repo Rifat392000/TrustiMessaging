@@ -1,0 +1,116 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = OnlineMessageManagement
+build_property.RootNamespace = OnlineMessageManagement
+build_property.ProjectDir = D:\Internship\Trust Bank Limited\Trust iMessaging\Trust_iMessaging\OnlineMessageManagement\OnlineMessageManagement\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Internship\Trust Bank Limited\Trust iMessaging\Trust_iMessaging\OnlineMessageManagement\OnlineMessageManagement
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Internship/Trust Bank Limited/Trust iMessaging/Trust_iMessaging/OnlineMessageManagement/OnlineMessageManagement/Views/AppUser/BulkMessageInfoCombined.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwVXNlclxCdWxrTWVzc2FnZUluZm9Db21iaW5lZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Internship/Trust Bank Limited/Trust iMessaging/Trust_iMessaging/OnlineMessageManagement/OnlineMessageManagement/Views/AppUser/bulkMessageUncheckeds.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwVXNlclxidWxrTWVzc2FnZVVuY2hlY2tlZHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Internship/Trust Bank Limited/Trust iMessaging/Trust_iMessaging/OnlineMessageManagement/OnlineMessageManagement/Views/AppUser/bulkmsgcreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwVXNlclxidWxrbXNnY3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Internship/Trust Bank Limited/Trust iMessaging/Trust_iMessaging/OnlineMessageManagement/OnlineMessageManagement/Views/AppUser/GetbulkMessages.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwVXNlclxHZXRidWxrTWVzc2FnZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Internship/Trust Bank Limited/Trust iMessaging/Trust_iMessaging/OnlineMessageManagement/OnlineMessageManagement/Views/AppUser/GetSingleMessages.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwVXNlclxHZXRTaW5nbGVNZXNzYWdlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Internship/Trust Bank Limited/Trust iMessaging/Trust_iMessaging/OnlineMessageManagement/OnlineMessageManagement/Views/AppUser/msgcreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwVXNlclxtc2djcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Internship/Trust Bank Limited/Trust iMessaging/Trust_iMessaging/OnlineMessageManagement/OnlineMessageManagement/Views/AppUser/SingleMessageUncheckeds.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwVXNlclxTaW5nbGVNZXNzYWdlVW5jaGVja2Vkcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Internship/Trust Bank Limited/Trust iMessaging/Trust_iMessaging/OnlineMessageManagement/OnlineMessageManagement/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Internship/Trust Bank Limited/Trust iMessaging/Trust_iMessaging/OnlineMessageManagement/OnlineMessageManagement/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Internship/Trust Bank Limited/Trust iMessaging/Trust_iMessaging/OnlineMessageManagement/OnlineMessageManagement/Views/MessageBox/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVzc2FnZUJveFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Internship/Trust Bank Limited/Trust iMessaging/Trust_iMessaging/OnlineMessageManagement/OnlineMessageManagement/Views/ServiceUser/create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVVzZXJcY3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Internship/Trust Bank Limited/Trust iMessaging/Trust_iMessaging/OnlineMessageManagement/OnlineMessageManagement/Views/ServiceUser/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVVzZXJcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Internship/Trust Bank Limited/Trust iMessaging/Trust_iMessaging/OnlineMessageManagement/OnlineMessageManagement/Views/ServiceUser/edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVVzZXJcZWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Internship/Trust Bank Limited/Trust iMessaging/Trust_iMessaging/OnlineMessageManagement/OnlineMessageManagement/Views/ServiceUser/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVVzZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Internship/Trust Bank Limited/Trust iMessaging/Trust_iMessaging/OnlineMessageManagement/OnlineMessageManagement/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Internship/Trust Bank Limited/Trust iMessaging/Trust_iMessaging/OnlineMessageManagement/OnlineMessageManagement/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Internship/Trust Bank Limited/Trust iMessaging/Trust_iMessaging/OnlineMessageManagement/OnlineMessageManagement/Views/SocialService/AddSocialService.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29jaWFsU2VydmljZVxBZGRTb2NpYWxTZXJ2aWNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Internship/Trust Bank Limited/Trust iMessaging/Trust_iMessaging/OnlineMessageManagement/OnlineMessageManagement/Views/SocialService/DeleteService.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29jaWFsU2VydmljZVxEZWxldGVTZXJ2aWNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Internship/Trust Bank Limited/Trust iMessaging/Trust_iMessaging/OnlineMessageManagement/OnlineMessageManagement/Views/SocialService/settings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29jaWFsU2VydmljZVxzZXR0aW5ncy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Internship/Trust Bank Limited/Trust iMessaging/Trust_iMessaging/OnlineMessageManagement/OnlineMessageManagement/Views/SocialService/SocialServiceList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29jaWFsU2VydmljZVxTb2NpYWxTZXJ2aWNlTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Internship/Trust Bank Limited/Trust iMessaging/Trust_iMessaging/OnlineMessageManagement/OnlineMessageManagement/Views/SocialService/UpdateService.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29jaWFsU2VydmljZVxVcGRhdGVTZXJ2aWNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Internship/Trust Bank Limited/Trust iMessaging/Trust_iMessaging/OnlineMessageManagement/OnlineMessageManagement/Views/User/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Internship/Trust Bank Limited/Trust iMessaging/Trust_iMessaging/OnlineMessageManagement/OnlineMessageManagement/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Internship/Trust Bank Limited/Trust iMessaging/Trust_iMessaging/OnlineMessageManagement/OnlineMessageManagement/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Internship/Trust Bank Limited/Trust iMessaging/Trust_iMessaging/OnlineMessageManagement/OnlineMessageManagement/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-1jxq578uwv

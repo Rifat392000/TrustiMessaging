@@ -1,0 +1,358 @@
+﻿@model ServiceUserViewModel
+@{
+    ViewData["Title"] = "Customer - ";
+}
+
+<h2 class="create" style="padding-bottom:10px">Customers</h2>
+
+<a asp-action="Create" class="anchor create create-btn"><i class='bx bx-user-plus'></i><span>Add New Customer</span></a>
+<div  class="searchElement" >
+   
+    <div>
+        <label for="slct" style="font-size:16px; font-weight:500;">Records per page  </label>
+        <select id="slct" onchange="changeRowsPerPage()" style="border:2px solid #11101d; border-radius:5px;">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+            <option value="0" selected>All</option>
+        </select>
+        <!-- SVG Sprites -->
+        <svg class="sprites">
+            <symbol id="select-arrow-down" viewBox="0 0 10 6">
+                <polyline points="1 1 5 5 9 1"></polyline>
+            </symbol>
+        </svg>
+    </div>
+    <div style="display:flex; align-items:center; gap:25px;">
+
+
+        <a asp-action="ExportToExcel" class="export-btn"><i class='bx bxs-file-export' style="padding-right:2px"></i>Export to Excel</a>
+
+        <input type="text" id="myInput" class="myInputC search-box" onkeyup="myFunction()" placeholder="Search for IDs, names, phone numbers or . . ." title="Type in a IDs, names, phone number or services"></div>
+    
+    </div>
+
+
+<div class="table-wrapper custom-wrapper" style="width: 95% ; ">
+
+    <table class="fl-table" id="myTable" style="width: 100%;">
+
+        <thead>
+            <tr id="myTableRow">
+                <th>Customer Id</th>
+                <th>Customer Name</th>
+                <th>
+                    Phone Number
+                </th>
+                <th>
+                    Services Use
+                </th>
+                <th class="date-filter-header">
+                    <div class="datepicker-wrapper">
+                        <span style="display: block">created Date time</span>
+                        <input type="text" id="datepicker" placeholder="Select date">
+                        <span class="calendar-icon" onclick="showCalendarPicker()"><i class='bx bxs-calendar'></i></span>
+                    </div>
+                </th>
+
+
+                <th>
+                    <div class="datepicker-wrapper">
+                        <span style="display: block">Updated Date time</span>
+                        <input type="text" id="sentDatePicker" placeholder="Select date">
+                        <span class="calendar-icon" onclick="showSentDatePicker()"><i class='bx bxs-calendar'></i></span>
+                    </div>
+                </th>
+                <th >Action</th>
+            </tr>
+        </thead>
+        <tbody>
+
+
+            @foreach (var serviceUser in Model.ServiceUsers)
+            {
+                <tr>
+                    <td>@serviceUser.Cid</td>
+                    <td>@serviceUser.Cname</td>
+                    <td>
+                        @serviceUser.PhoneNumber
+                    </td>
+                    <td class="line">
+                        @{
+
+                            String[] values = @serviceUser.ServiceUse.Split(',');
+
+                            int[] integerArray = new int[values.Length];
+
+                            int i = 0;
+                            foreach (string value in values)
+                            {
+                                int intValue;
+                                if (int.TryParse(values[i], out intValue))
+                                {
+                                    integerArray[i] = intValue;
+                                }
+                                i++;
+                            }
+                            for (int j = 0; j < integerArray.Length; j++)
+                            {
+                                foreach (var socialService in Model.SocialServices)
+                                {
+                                    if (integerArray[j] == @socialService.ServiceId)
+                                    {
+                                        if (j > 0 && j < integerArray.Length)
+                                        {
+
+                                            <span>,</span>
+                                        }
+                                        <span> @socialService.ServiceName</span>
+                                    }
+                                }
+                            }
+                        }
+
+                    </td>
+                    <td>
+                        <span>@serviceUser.CreatedAt.ToString("yyyy-MM-dd")</span><br>
+                        <span>@serviceUser.CreatedAt.ToString("HH:mm:ss")</span>
+
+
+                    </td>
+                    <td>
+                        @if (@serviceUser.UpdatedAt.ToString() != @serviceUser.CreatedAt.ToString())
+                        {
+
+                            <span>@serviceUser.UpdatedAt.ToString("yyyy-MM-dd")</span> <br>
+                            <span>@serviceUser.UpdatedAt.ToString("HH:mm:ss")</span>
+                        }
+
+                    </td>
+                    <td style="padding-left:12px;padding-right:12px;">
+                        <a asp-action="Edit" asp-route-id="@serviceUser.Cid" style="color:#0079FF"><i class='bx bx-edit'></i></a>
+                        <a asp-action="Delete" asp-route-id="@serviceUser.Cid"><img src="~/image/trash.png" width="30px" /></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+</div>
+<div style="padding-top:10px"></div>
+
+<script>
+
+    function changeRowsPerPage() {
+        var rowsPerPage = parseInt(document.getElementById('slct').value);
+        var table = document.getElementById("myTable");
+        var tr = table.getElementsByTagName("tr");
+        for (var i = 1; i < tr.length; i++) {
+            if (rowsPerPage === 0 || i <= rowsPerPage) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+        }
+    }
+
+
+
+    // Get the element by ID
+    var userSection = document.getElementById('customer');
+    // Change the background color
+    userSection.style.backgroundColor = '#11101d';
+    userSection.querySelector('span').style.color = 'white';
+    userSection.querySelector('i').style.color = 'white';
+    
+</script>
+<script>
+    function myFunction() {
+        var input, filter, table, tr, td, i, j, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 1; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td");
+            var match = false;
+            for (j = 0; j < td.length - 3; j++) {
+                var cell = td[j];
+                txtValue = cell.textContent || cell.innerText;
+                if (filter === '' || txtValue.toUpperCase().indexOf(filter) > -1) {
+                    match = true;
+                    cell.innerHTML = highlightMatchingSubstring(txtValue, filter);
+                } else {
+                    cell.innerHTML = txtValue; // Reset the cell content if it doesn't match
+                }
+            }
+            if (match || filter === '') {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+        }
+    }
+
+
+    function highlightMatchingSubstring(text, filter) {
+        var regex = new RegExp(filter, 'gi');
+        return text.replace(regex, function (match) {
+            return '<span class="highlight">' + match + '</span>';
+        });
+    }
+
+    
+</script>
+
+
+<script>
+    $(document).ready(function () {
+       
+        var userAdded = '@(TempData["UserAdded"] ?? "false")';
+        if (userAdded === 'True') {
+            
+            toastr.options = {
+                "positionClass": "toast-top-right",
+                "timeOut": "2000", 
+                "closeButton": true,
+                "progressBar": true,
+                "newestOnTop": true,
+                "rtl": false,
+                "onHidden": function () {
+                    window.location.href = '@Url.Action("Index", "ServiceUser")';
+                },
+                
+            };
+            toastr.success('Customer has been Created successfully.',  {
+                "timeOut": "1000" 
+            });
+        }
+    });
+
+    $(document).ready(function () {
+      
+        var UserUpdated = '@(TempData["UserUpdated"] ?? "false")';
+        if (UserUpdated === 'True') {
+           
+            toastr.options = {
+                "positionClass": "toast-top-right",
+                "timeOut": "2000", 
+                "closeButton": true,
+                "progressBar": true,
+                "newestOnTop": true,
+                "rtl": false,
+                "onHidden": function () {
+                    window.location.href = '@Url.Action("Index", "ServiceUser")';
+                },
+                "toastClass": "custom-update-toastr"
+            };
+            toastr.success('Customer has been Updated successfully.', {
+                "timeOut": "1000" 
+            });
+        }
+    });
+
+    $(document).ready(function () {
+       
+        var UserDeleted = '@(TempData["UserDeleted"] ?? "false")';
+        if (UserDeleted === 'True') {
+            
+            toastr.options = {
+                "positionClass": "toast-top-right",
+                "timeOut": "2000", 
+                "closeButton": true,
+                "progressBar": true,
+                "newestOnTop": true,
+                "rtl": false,
+                "onHidden": function () {
+                    window.location.href = '@Url.Action("Index", "ServiceUser")';
+                },
+                "toastClass": "custom-Delete-toastr"
+            };
+            toastr.success('Customer has been Deleted successfully.', {
+                "timeOut": "1000" 
+            });
+        }
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $("#datepicker").datepicker({
+            dateFormat: "yy-mm-dd",
+            onSelect: function (dateText) {
+                filterTableByDate(dateText);
+            }
+        });
+
+        // Listen for changes in the date picker input
+        $("#datepicker").on("change", function () {
+            var selectedDateText = $(this).val();
+            filterTableByDate(selectedDateText);
+        });
+    });
+
+    function filterTableByDate(selectedDateText) {
+        var rows = document.querySelectorAll("#myTable tbody tr");
+
+        for (var i = 0; i < rows.length; i++) {
+            var row = rows[i];
+            var messageCreatedCell = row.querySelector("td:nth-child(5) span");
+            if (messageCreatedCell) {
+                var messageCreatedDateText = messageCreatedCell.textContent.split('<br>')[0].trim(); // Extract the date part and remove whitespace
+
+                if (!selectedDateText || selectedDateText === messageCreatedDateText) {
+                    row.style.display = "table-row";
+                } else {
+                    row.style.display = "none";
+                }
+            }
+        }
+    }
+
+    function showCalendarPicker() {
+        $("#datepicker").datepicker("show");
+    }
+
+</script>
+
+<script>
+
+    $(document).ready(function () {
+        $("#sentDatePicker").datepicker({
+            dateFormat: "yy-mm-dd",
+            onSelect: function (dateText) {
+                filterTableBySentTime(dateText);
+            }
+        });
+
+        // Listen for changes in the sent date picker input
+        $("#sentDatePicker").on("change", function () {
+            var selectedDateText = $(this).val();
+            filterTableBySentTime(selectedDateText);
+        });
+    });
+    function filterTableBySentTime(selectedDateText) {
+        var rows = document.querySelectorAll("#myTable tbody tr");
+
+        for (var i = 0; i < rows.length; i++) {
+            var row = rows[i];
+            var messageSentCell = row.querySelector("td:nth-child(6) span"); // Adjust the column index accordingly
+            if (messageSentCell) {
+                var messageSentDateText = messageSentCell.textContent.split('<br>')[0].trim(); // Extract the date part and remove whitespace
+
+                if (!selectedDateText || selectedDateText === messageSentDateText) {
+                    row.style.display = "table-row";
+                } else {
+                    row.style.display = "none";
+                }
+            }
+        }
+    }
+    function showSentDatePicker() {
+        $("#sentDatePicker").datepicker("show");
+    }
+
+
+</script>

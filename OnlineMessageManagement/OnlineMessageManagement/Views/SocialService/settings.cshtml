@@ -1,0 +1,169 @@
+﻿@using OnlineMessageManagement.Models
+
+@model List<SocialService>
+@{
+    ViewData["Title"] = "Settings - ";
+}
+
+<style>
+
+
+    .fl-table tr:nth-child(even) {
+        background: #fdf8f8;
+    }
+
+    .status-text {
+        font-weight: bold;
+    }
+
+        .status-text.on {
+            background-color: #dfefe8;
+            padding:0 3px;
+            color: #488963;
+            font-size:14px;
+            border-radius:2px;
+        }
+
+        .status-text.off {
+            background-color: #edcdcd;
+            padding: 0 3px;
+            color: #d31212;
+            font-size: 14px;
+            border-radius: 2px;
+        }
+
+
+    .message-body{
+        padding:2px 0;
+        font-size:16px;
+    }
+    
+
+</style>
+
+<div class="ipaddress">
+    <table style="border:2px solid green; padding:5px; border-radius: 5px;">
+        <tr>
+            <td style="font-weight:600">MY IP</td>
+            <td style="padding-left:3px;padding-right:10px;">:</td>
+            <td><strong>@ViewBag.IPv4Address</strong></td>
+        </tr>
+
+    </table>
+</div>
+
+<a asp-controller="SocialService" asp-action="AddSocialService" class="anchor create-btn" style="margin-bottom:20px;" >Add New Service</a>
+
+<div style="display:flex; justify-content:space-between">
+    <div class="table-wrapper">
+        <table class="fl-table">
+            <caption>Social Media Service Settings</caption>
+            <thead>
+                <tr>
+                    <th>Service ID</th>
+                    <th>Service Name</th>
+                    <th>Current Status</th>
+                    <th>Service Modification</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var service in Model)
+                {
+                    <tr>
+                        <td><b>@service.ServiceId</b></td>
+                        <td>@service.ServiceName</td>
+                        <td>
+                            <span class="status-text ">@GetStatusText(service.ServiceStatus)</span>
+                        </td>
+                        <td style="padding:10px 0;">
+                            <label class="switch">
+                                <input type="checkbox" @(service.ServiceStatus == 1 ? "checked" : "") data-service-id="@service.ServiceId" data-initial-status="@GetStatusText(service.ServiceStatus)">
+                                <span class="slider round"></span>
+                            </label>
+                        </td>
+                        <td style="padding-left:12px;padding-right:12px;">
+                            <a asp-controller="SocialService" asp-action="UpdateService" asp-route-id="@service.ServiceId" style="color:#0079FF"><i class='bx bx-edit'></i></a>
+                            <a asp-controller="SocialService" asp-action="DeleteService" asp-route-id="@service.ServiceId"><img src="~/image/trash.png" width="30px" /></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+
+    <div >
+
+        <div style="display:flex;gap:20px; flex-direction:column; margin-right:50px; margin-top:-10px">
+            <a class="message-body" style="text-align:center" asp-controller="AppUser" asp-action="SingleMessageUncheckeds"><img src="~/image/email.png" /> Single Messages<br /><span style="margin-top:-6px">Processing</span></a>
+            <a class="message-body" style="text-align:center" asp-controller="AppUser" asp-action="bulkMessageUncheckeds"><img src="~/image/broadcasting.png" />Bulk Messages<br /><span style="margin-top:-6px">Processing</span></a>
+        </div>
+
+    </div>
+</div>
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+
+            $(".switch input").each(function () {
+                var initialStatus = $(this).data("initial-status");
+                var statusTextElement = $(this).closest("tr").find(".status-text");
+                setStatusColor(statusTextElement, initialStatus);
+            });
+
+
+            $(".switch input").change(function () {
+                var serviceId = $(this).data("service-id");
+                var status = $(this).prop("checked") ? 1 : 0;
+                var statusTextElement = $(this).closest("tr").find(".status-text");
+                var message = status === 1 ? "On" : "Off";
+                statusTextElement.text(message);
+                setStatusColor(statusTextElement, message);
+                updateServiceStatus(serviceId, status);
+            });
+        });
+
+        function setStatusColor(statusTextElement, status) {
+            if (status === "On") {
+                statusTextElement.removeClass("off").addClass("on");
+            } else {
+                statusTextElement.removeClass("on").addClass("off");
+            }
+        }
+
+        function updateServiceStatus(serviceId, status) {
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("UpdateServiceStatus", "SocialService")',
+                data: { serviceId: serviceId, status: status },
+                success: function (data) {
+
+                },
+                error: function () {
+                    alert("An error occurred while updating the service status.");
+                }
+            });
+        }
+    </script>
+}
+
+
+@functions {
+    
+    public string GetStatusText(int status)
+    {
+        return status == 1 ? "On" : "Off";
+    }
+}
+
+
+<script>
+    // Get the element by ID
+    var dashboardSection = document.getElementById('settings');
+    // Change the background color
+    dashboardSection.style.backgroundColor = '#11101d';
+    dashboardSection.querySelector('span').style.color = 'white';
+    dashboardSection.querySelector('i').style.color = 'white';
+</script>

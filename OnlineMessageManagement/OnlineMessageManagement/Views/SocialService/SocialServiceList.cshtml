@@ -1,0 +1,64 @@
+﻿@model OnlineMessageManagement.Models.AllModels
+
+@{
+    ViewData["Title"] = "Dashboard - ";
+}
+
+
+<div class="total-user" style="margin-top:50px"><span>Total Individual Customer</span><span>@Model.TotalServiceUserCount</span></div>
+
+<div class="table-wrapper">
+    <table class="fl-table">
+        <caption>Social Media Services</caption>
+        <thead>
+            <tr>
+                <th>Service Id</th>
+                <th>Name</th>
+                <th>Service Total Customer</th>
+                <th>Status</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @{
+
+                if (Model.socialServiceList != null && Model.socialServiceList.Count > 0)
+                {
+                    foreach (var item in Model.socialServiceList)
+                    {
+                        <tr>
+                            <td><b>@item.ServiceId</b></td>
+                            <td>@item.ServiceName</td>
+                            <td>
+                                @(Model.ServiceUserCounts.ContainsKey(item.ServiceId) ? Model.ServiceUserCounts[item.ServiceId] : 0)
+
+
+                            </td>
+                            <td style="padding-bottom:5px;padding-top:5px; ">
+                                @if (@item.ServiceStatus == 1)
+                                {
+                                    <img src="~/image/check-mark.png" alt="" width="30px" class="icon">
+                                }
+                                else
+                                {
+                                    <img src="~/image/cancel.png" alt="" width="25px" class="icon">
+                                }
+                            </td>
+                        </tr>
+                    }
+                }
+
+            }
+        <tbody>
+    </table>
+</div>
+
+<script>
+    // Get the element by ID
+    var dashboardSection = document.getElementById('dashboard');
+    // Change the background color
+    dashboardSection.style.backgroundColor = '#11101d';
+    dashboardSection.querySelector('span').style.color = 'white';
+    dashboardSection.querySelector('i').style.color = 'white';
+    
+</script>
